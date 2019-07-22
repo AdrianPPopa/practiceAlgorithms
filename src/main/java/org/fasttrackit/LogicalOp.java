@@ -1,23 +1,90 @@
-//package org.fasttrackit;
-//
-//public class LogicalOp {
-//
-//    @Override
-//    public String toString() {
-//        return "LogicalOp{" +
-//                "test=" + test +
-//                '}';
-//    }
-//
-//    LogicalOp test = new LogicalOp();
-//
-//
-//    public static void printNumber(int startingNumber){
-//        for (int i = 1; i <= 100; i++ ){
-//            int number = startingNumber + i;
-//            printNumber(i);
-//        }
-//        System.out.println(printNumber(1));
-//    }
-//
-//}
+package org.fasttrackit;
+
+
+
+public class LogicalOp {
+
+
+    public static void countAscending(int x) {
+        for (int i = x; i <= 100; i++) {
+            System.out.print(i + ",");
+        }
+        System.out.println();
+    }
+
+    public static void countDescending(int x) {
+
+        for (int i = x; i >= -100; i--) {
+            System.out.print(i + ",");
+        }
+        System.out.println();
+    }
+
+    public static void countBetween(int x, int y) {
+        if (x < y) {
+            for (int i = x; i <= y; i++)
+                System.out.print(i + ",");
+        } else {
+            for (int i = x; i >= y; i--) {
+                System.out.print(i + ",");
+            }
+        }
+        System.out.println();
+    }
+
+    public static void countBetwenAscending(int x, int y) {
+        if (x < y) {
+            for (int i = x; i <= y; i++) {
+                System.out.print(i + " ");
+            }
+        } else {
+            for (int i = y; i <= x; i++) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
+
+    public static void countEvenNumbers() {
+        for (int i = 0; i <= 100; i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + ",");
+            }
+        }
+        System.out.println();
+    }
+
+    public static void countOddNumbers() {
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 != 0) {
+                System.out.print(i + ",");
+            }
+        }
+        System.out.println();
+    }
+
+    public int sumAllNumbers(int x) {
+        int sum = 0;
+        for (int i = x; i <= 100; i++) {
+            sum += i;
+        }
+        System.out.print(sum);
+        System.out.println();
+        return sum;
+    }
+
+     public static void printAsterisks() {
+         String asterisk = "*";
+         for (int i = 0; i < 6; i++) {
+             System.out.print(asterisk);
+             for (int l = i; l < 5; l++) {
+                 System.out.print(asterisk);
+             }
+             System.out.println();
+         }
+     }
+
+}
+
+
+
